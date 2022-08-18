@@ -1,0 +1,17 @@
+package com;
+
+public class Employee {
+
+	
+	public Employee() {
+		super();
+		System.out.println("Object Created Using Empty Constructor");// TODO Auto-generated constructor stub
+	}
+
+	public void display(){ //Normal POJO Class
+		System.out.println("Employee Class Method");
+	}
+	
+	
+	
+}

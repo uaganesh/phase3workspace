@@ -1,0 +1,27 @@
+package com;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class DemoClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	ApplicationContext ac=new ClassPathXmlApplicationContext("beans.xml");
+	Address ad1=(Address)ac.getBean("address");
+	System.out.println(ad1);
+	
+	Employee emp1=(Employee)ac.getBean("employee");
+	System.out.println(emp1);
+	
+	ad1.setCity("Kollam");
+	ad1.setState("Kerala");
+	emp1.setId("100");
+	emp1.setName("Ashok");
+	emp1.setAdd(ad1);
+	emp1.setSalary("5000");
+
+	}
+
+}
